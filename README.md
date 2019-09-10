@@ -157,3 +157,13 @@ knative-sources                                Active
 ```
 
 The above are all installed as part of Kabanero foundation setup.
+
+## Tekton
+
+You can access the tekton pipeline at `tekton-dashboard-kabanero.<minishift_ip>.nip.io`.
+
+In the above case it will be `tekton-dashboard-kabanero.192.168.64.29.nip.io`
+
+<p align="center">
+    <img src="images/tekton_home.png">
+</p>
