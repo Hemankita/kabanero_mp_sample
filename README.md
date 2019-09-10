@@ -105,7 +105,38 @@ git clone https://github.com/kabanero-io/kabanero-foundation.git
 cd kabanero-foundation/scripts
 ```
 
-- Run the script `install-kabanero-foundation.sh` as follows.
+- To install the foundation setup, you need to login as `admin`
+
+```
+oc login -u system:admin
+```
+
+If successfully logged in, you will see something like below.
+
+```
+$ oc login -u system:admin
+Logged into "https://192.168.64.29:8443" as "system:admin" using existing credentials.
+
+You have access to the following projects and can switch between them with 'oc project <projectname>':
+
+    default
+    kube-dns
+    kube-proxy
+    kube-public
+    kube-system
+  * myproject
+    openshift
+    openshift-apiserver
+    openshift-controller-manager
+    openshift-core-operators
+    openshift-infra
+    openshift-node
+    openshift-service-cert-signer
+    openshift-web-console
+
+Using project "myproject".
+```
+- Run the below command to install kabanero foundation setup.
 
 ```
 openshift_master_default_subdomain=<minishift_ip>.nip.io ./install-kabanero-foundation.sh
@@ -113,7 +144,7 @@ openshift_master_default_subdomain=<minishift_ip>.nip.io ./install-kabanero-foun
 
 In the above case, it will be `openshift_master_default_subdomain=192.168.64.29.nip.io ./install-kabanero-foundation.sh`
 
-- Once it is successfully installed, you can run `occ get projects` to see what it installed.
+- Once it is successfully installed, you can run `oc get projects` to see what it installed.
 
 ```
 $ oc get projects
