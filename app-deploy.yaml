@@ -5,25 +5,25 @@ metadata:
 spec:
   # Add fields here
   version: 1.0.0
-  applicationImage: kabanero-mp-sample 
+  applicationImage: kabanero-mp-sample
   stack: java-microprofile
   service:
     type: NodePort
     port: 9080
     annotations:
       prometheus.io/scrape: 'true'
-  readinessProbe:
-    failureThreshold: 12
-    httpGet:
-      path: /health/ready
-      port: 9080
-    initialDelaySeconds: 5
-    periodSeconds: 2
-  livenessProbe:
-    failureThreshold: 12
-    httpGet:
-      path: /health/live
-      port: 9080
-    initialDelaySeconds: 5
-    periodSeconds: 2
+  # readinessProbe:
+  #   failureThreshold: 12
+  #   httpGet:
+  #     path: /health/ready
+  #     port: 9080
+  #   initialDelaySeconds: 5
+  #   periodSeconds: 2
+  # livenessProbe:
+  #   failureThreshold: 12
+  #   httpGet:
+  #     path: /health/live
+  #     port: 9080
+  #   initialDelaySeconds: 5
+  #   periodSeconds: 2
   expose: true
