@@ -2,6 +2,7 @@ apiVersion: appsody.dev/v1beta1
 kind: AppsodyApplication
 metadata:
   name: kabanero-mp-sample
+  namespace: microprofile-kabanero
 spec:
   # Add fields here
   version: 1.0.0
